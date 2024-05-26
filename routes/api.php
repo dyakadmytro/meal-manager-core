@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->group(function () {
     Route::controller(\App\Http\Controllers\ProductController::class)->prefix('product')->name('.product')->group(function () {
         Route::get('{product}', 'show')->name('.get');
-        Route::post('create', 'create')->name('.create');
-        Route::get('update/{product}', 'update')->name('.update');
-        Route::get('delete/{product}', 'delete')->name('.delete');
+        Route::post('create', 'store')->name('.create');
+        Route::patch('update/{product}', 'update')->name('.update');
+        Route::delete('delete/{product}', 'destroy')->name('.delete');
     });
 });

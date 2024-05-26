@@ -21,12 +21,12 @@ class ProductFactory extends Factory
             'user_id' => 1,
             'name' => $this->faker->word(),
             'description' => $this->faker->sentence(),
-            'nutrition_facts' => json_encode([
+            'nutrition_facts' => [
                 'cal' => $this->faker->randomDigit(),
                 'carb' => $this->faker->randomDigit(),
                 'prot' => $this->faker->randomDigit(),
                 'fat' => $this->faker->randomDigit(),
-            ]),
+            ],
         ];
     }
 }

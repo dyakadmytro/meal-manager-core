@@ -14,6 +14,10 @@ class Product extends Model
 
     protected $fillable = ['name', 'description', 'notes', 'nutrition_facts', 'user_id', 'parent_id'];
 
+    protected $casts = [
+        'nutrition_facts' => 'array',
+    ];
+
     public function uniqueIds(): array
     {
         return ['id'];
