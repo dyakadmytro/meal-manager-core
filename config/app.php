@@ -168,6 +168,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -185,4 +186,11 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'default' => [
+        'entities' => [
+            'admin' => [
+                'id' => '8888888d-48dc-4bde-a8bb-8888fbf76f5c'
+            ]
+        ]
+    ]
 ];
